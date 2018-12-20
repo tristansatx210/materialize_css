@@ -1,0 +1,47 @@
+<% if @student.errors.any? %>
+  Please fix 
+  <%= pluralize(@student.errors.count, "error") %>
+  <ul>
+    <% @student.errors.full_messages.each do |msg| %>
+      <li>
+        <%= msg %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<div class="container">
+  <div class="row center enroll">
+    <div class="col s12 m12 l12">
+      <div class="card-panel">
+      <h3 class="header">Enroll Now!</h3>
+        <div class="row">
+        <%= form_for(@student, html: { class: "col s12" }) do |f| %>
+          <div class="row">
+            <div class="input-field">
+          <i class="material-icons prefix">account_circle</i>
+          <%= f.text_field :name %>
+          <%= f.label :name %>
+          </div>
+          </div>
+          <div class="row">
+              <div class="input-field">
+            <i class="material-icons prefix">email</i>  
+            <%= f.label :email %>
+            <%= f.email_field :email %>
+            </div>
+          </div>
+          <div class="row">
+              <div class="input-field">
+                
+                <%= f.submit "Enroll", class: "btn waves-effect waves-light right" %>
+            
+            </div>
+          </div>
+          
+        <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
