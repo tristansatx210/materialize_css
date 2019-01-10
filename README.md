@@ -11,15 +11,23 @@ Things you may want to cover:
 * Rails version 5.2.2
 
 * System dependencies
-Install the following gems
+Install the following gems:
+
 gem 'jbuilder', '~> 2.5'
+
 gem 'materialize-sass', '~> 1.0.0'
+
 gem 'material_icons' 
+
 gem 'jquery-rails'
 
 * Configuration
 
 * Database creation
+
+For production you should install Postgres gem
+
+gem 'pg'
 
 * Database initialization
 
